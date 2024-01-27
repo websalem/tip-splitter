@@ -1,0 +1,215 @@
+main{
+    h1{
+        font-size: 1.5rem;
+        width: 80px;
+        word-break:break-all;
+        text-transform: uppercase;
+       margin:auto;
+        margin-bottom: 50px;
+        letter-spacing: 5px;
+        color:$Dark-grayish-cyan;
+    }
+}
+.tip-calculator{
+    background-color: $White;
+    padding:30px;
+    display: flex;
+    border-radius: 15px;
+    gap:50px;
+    box-shadow: 0 0 35px rgba(0,0,0,.1);
+    .tip, .result{
+        flex:1;
+    }
+    label{
+        font-family: $main-font;
+    }
+    input{
+        font-size: 1.5rem;
+        text-align: right;
+        font-family: $main-font;
+        padding:5px 15px;
+        border: 2px solid transparent;
+        background-color: $Very-light-grayish-cyan;
+        border-radius: 5px;
+        color:$Very-dark-cyan;
+       
+        &:hover {
+            border:2px solid $Strong-cyan;
+        }
+        &:focus{
+            border:2px solid $Strong-cyan;
+            outline: none;
+        }
+        cursor: pointer;
+        ::placeholder{
+            color:$Light-grayish-cyan;
+        }
+        
+    }
+    .tip{
+        form{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 100%;
+            padding:20px 0;
+        }
+        font-size: 12px;
+        color:$Dark-grayish-cyan;
+        .form-field:first-of-type, .form-field:last-of-type{
+            display: flex;
+            flex-direction: column;
+        }
+        .form-field{
+            position: relative;
+           }
+        .radio-form-field{
+            display: inline-block;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            width:30%;
+            input[type='text']{
+                width:100%;
+            }
+        }
+        .radio-input{
+            display: none;
+        }
+        .radio-label{
+            display: inline-block;
+            background-color: $Very-dark-cyan;
+            padding:10px 20px;
+            border-radius: 5px;
+           width:100%;
+            text-align: center;
+            font-size: .85rem;
+            color: $White;
+            cursor: pointer;
+            &:hover{
+                background-color: $Strong-cyan;
+                color:$Very-dark-cyan;
+            }
+        }
+        .radio-input:checked+.radio-label{
+            background-color: $Strong-cyan;
+            color:$Very-dark-cyan;
+        }
+        .title{
+            margin-bottom: 10px;
+        }
+        img{
+            max-width: 30px;
+            position: absolute;
+            top:60%;
+            left: 20px;
+        }
+
+    }
+    .result{
+        background-color: $Very-dark-cyan;
+        padding:30px;
+        border-radius: 10px;
+        color:$White;
+        .result-field{
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 30px;
+            align-items: center;
+            .text{
+                font-size: .85rem;
+                span{
+                    color:$Dark-grayish-cyan;
+                    font-size: .75rem;
+                }
+            }
+            .amount{
+                font-size: 3rem;
+                color:$Strong-cyan;
+            }
+        }
+        .reset-btn{
+            width: 100%;
+            appearance: none;
+            border: none;
+            padding:15px;
+            font-size: 1.125rem;
+            margin-top: 100px;
+            border-radius: 5px;
+            font-weight: bold;
+            background-color: #16686D;
+            color:$Very-dark-cyan;
+            cursor: pointer;
+            &:hover{
+                background-color: $Strong-cyan;
+            }
+        }
+    }
+}
+@media screen and (max-width:768px) {
+    main{
+        padding-top: 50px;
+        h1{
+            font-size: 1.5rem;
+            width: 80px;
+            word-break:break-all;
+            text-transform: uppercase;
+           margin:auto;
+            margin-bottom: 40px;
+            letter-spacing: 5px;
+            color:$Dark-grayish-cyan;
+        }
+    }
+    .tip-calculator{
+        width: 95%;
+        margin:auto;
+        flex-direction: column;
+        gap:0;
+        .tip{
+            form{
+                padding:0;
+            }
+            .radio-label{
+                width:45%;
+                font-size: 1.25rem;
+            }
+           .form-field{
+            margin-bottom: 30px;
+           }
+           .radio-form-field{
+            display: inline-block;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            width:45%;
+            input[type='text']{
+                width:100%;
+            }
+        }
+          .radio-label{
+            width: 100%;
+          }
+          .title{
+            margin-bottom: 10px;
+            font-size: .85rem;
+           
+        }
+        img{
+            max-width: 30px;
+            position: absolute;
+            top:60%;
+            left: 20px;
+        }
+    
+        }
+        .result{
+            .result-field{
+                .amount{
+                    font-size: 2rem;
+                }
+            }
+            .reset-btn{
+                margin-top: 0px;
+                background-color: $Strong-cyan;
+            }
+        }
+    }
+}
